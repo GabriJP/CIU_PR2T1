@@ -39,6 +39,7 @@ void Display() {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
 void Teclado1(unsigned char key, int x, int y) {
+#pragma clang diagnostic pop
     switch (key) {
         case '1':
             red = 1.0;
@@ -65,11 +66,11 @@ void Teclado1(unsigned char key, int x, int y) {
     }
     glutPostRedisplay();
 }
-#pragma clang diagnostic pop
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
 void Teclado2(int key, int x, int y) {
+#pragma clang diagnostic pop
     if (key == GLUT_KEY_F1) {
         red = 1.0;
         green = 1.0;
@@ -77,7 +78,7 @@ void Teclado2(int key, int x, int y) {
     }
     glutPostRedisplay();
 }
-#pragma clang diagnostic pop
+
 
 int main(int argc, char *argv[]) {
     glutInit(&argc, argv);
